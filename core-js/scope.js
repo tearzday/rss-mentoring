@@ -40,3 +40,36 @@
 // console.log(aLet);   // ?
 // console.log(aConst); // ?
 /* ------------------------------ */
+
+// console.log(varInFn); // ?
+
+// function fnScope() {
+//   console.log(varInFn); // ?
+//   var varInFn = 'var';
+// }
+
+// fnScope();
+
+// console.log(varInBlock); // ?
+
+// {
+//     var varInBlock = 'var';
+// }
+
+
+/* ------------------------------ */
+
+// const rectange = 'rectange';
+
+// function circleFn() {
+//     const circle = 'circle';
+
+//     if(true) {
+//         const polygon = 'polygon'
+//         console.log(rectange, circle, polygon); // ?
+//     }
+
+//     console.log(rectange, circle, polygon); // ?
+// }
+
+// console.log(rectange, circle, polygon); // ?

@@ -44,7 +44,6 @@
 
 /* ------------------------------ */
 
-
 // function firstFn() {}
 // console.log(firstFn.prototype);
 
