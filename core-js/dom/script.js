@@ -358,4 +358,27 @@ const childrenNode = document.querySelector('#children')
 //     console.log('parent')
 // },true) 
 
+/* 4) Custom events. */
+let count = 0
+const countNode = document.querySelector('#counter')
+const countBtn = document.querySelector('#count-btn')
+
+const event = new CustomEvent('counterEvent', { detail: {count} })
+
+countBtn.addEventListener('click', () => {
+  count++
+
+  const event = new CustomEvent('counterEvent', {
+    detail: { count }
+  })
+
+  countNode.dispatchEvent(event)
+})
+
+countNode.addEventListener('counterEvent', (e) => {
+    countNode.textContent = e.detail.count
+})
+
+
+
 
