@@ -32,7 +32,7 @@
 //     }
 // }
 
-// const fn = function() {
+// const fn = function(name) {
 //   return this.name;
 // };
 
