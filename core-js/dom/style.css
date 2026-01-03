@@ -351,6 +351,7 @@ template {
 :root {
     --color-accent: rgb(85, 88, 242);
     --color-black: rgb(18, 19, 21);
+    --color-red: rgb(180, 69, 69);
     --rounded: 10px
 }
 
@@ -367,6 +368,9 @@ header {
 
 main {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .container {
@@ -381,9 +385,39 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 10px;
     border-radius: var(--rounded);
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     background-color: var(--color-accent);
     color: var(--color-black);
+    overflow-y: scroll;
+}
+
+.children {
+    background-color: var(--color-red);
+    height: 50px;
+}
+
+.blinking {
+    animation: blinkingAnim 5s infinite;
+}
+
+@keyframes blinkingAnim {
+    0% {
+        background-color: var( --color-red);
+    }
+    100% {
+        background-color: var(--color-accent);
+    }
+}
+
+input::placeholder {
+    color: var(--color-black);
+    text-align: center;
+}
+
+.task2 {
+    cursor: pointer;
 }
