@@ -262,3 +262,71 @@ document.body.addEventListener('keydown', (e) => {
         document.body.style.background = 'black'
     }
 })
+
+
+/* 3) Forms
+ТУТ НУЖНО НОРМ ДОРАБОТАТЬ ОБЪЯСНЕНИЕ + ОБДУМАТЬ ВАРИАЦИИ ЧЕ ПОКАЗАТЬ, ТИПО formdata
+const form = document.getElementById('form')
+
+// Нужно на событие отправки формы отключить перезагрузку и в result отобразить значения введенные в инпуты
+const results = document.querySelector('#results')
+
+
+// валидация имени через js на каждое нажатие. Если длинна меньше 3 выводим ошибку в error
+
+const inputName = document.querySelector('#name')
+const error = document.querySelector('#error')
+
+// на изменение checkbox вкл/откл кнопку отправки (событие не click) (для откл добавляем класс disable)
+const checkbox = document.querySelector('#checkbox')
+const submit = document.querySelector('#submit')
+
+// на клик по глазику делаем видимые поля пароля (должно работать в формате туда обратно)
+const password = document.querySelector('#password')
+const togglePassword = document.querySelector('#toggle-password')
+*/
+
+const form = document.getElementById('form')
+
+
+//
+const results = document.querySelector('#results')
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    result.textContent = form.elements.username.value + " " + form.elements.password.value
+})
+
+// 
+const inputName = document.querySelector('#name')
+const error = document.querySelector('#error')
+
+inputName.addEventListener('input', (e) => {
+   if(inputName.value.length < 3) {
+    error.textContent = 'Длинна должна быть больше 3'
+   } else {
+    error.textContent = ''
+   }
+})
+
+//
+const checkbox = document.querySelector('#checkbox')
+const submit = document.querySelector('#submit')
+
+checkbox.addEventListener('change', (e) => {
+    if(checkbox.checked) {
+        submit.classList.add('disable')
+    } else {
+        submit.classList.remove('disable')
+    }
+})
+
+// 
+const password = document.querySelector('#password')
+const togglePassword = document.querySelector('#toggle-password')
+
+togglePassword.addEventListener('click', () => {
+    const passAttribute = password.type === 'password' ? 'text' : 'password'
+
+    password.setAttribute('type', passAttribute)
+})
