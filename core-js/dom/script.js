@@ -330,3 +330,32 @@ togglePassword.addEventListener('click', () => {
 
     password.setAttribute('type', passAttribute)
 })
+
+
+
+/* 4) Event Phases and their differences.
+
+
+*/
+const parentNode = document.querySelector('#parent')
+const childrenNode = document.querySelector('#children')
+
+// Что будет в консоли при клике на родителя? Что будет в консоли при клике на дочерний? (parent, children parent)
+// childrenNode.addEventListener('click', () => {
+//     console.log('children')
+// }) 
+
+// parentNode.addEventListener('click', () => {
+//     console.log('parent')
+// }) 
+
+// Что будет в консоли при клике на родителя? Что будет в консоли при клике на дочерний? (parent, parent children)
+// childrenNode.addEventListener('click', () => {
+//     console.log('children')
+// }) 
+
+// parentNode.addEventListener('click', (e) => {
+//     console.log('parent')
+// },true) 
+
+
