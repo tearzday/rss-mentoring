@@ -21,7 +21,7 @@ Item 4 - ищем по тегу и добавляем класс 'blinking'
 
 /* 2) Events
 
-Нужно найти элементы и их модифицировать
+Нужно добавить события
 
 const nodesTask2 = document.querySelectorAll('.task2')
 
@@ -41,6 +41,80 @@ const eventNode3 = nodesTask2[2]
 event 4 - добавляем смену фона боди по нажанию на кнопку b на красный. На другие клавиши - черный
 
 */
+
+
+/* ------------------------------ */
+
+/* 3) Forms
+const form = document.getElementById('form')
+
+// Нужно на событие отправки формы отключить перезагрузку и в result отобразить значения введенные в инпуты (имя и пароль)
+const result = document.querySelector('#result')
+
+
+// валидация имени через js на каждое нажатие. Если длинна меньше 3 выводим ошибку в error
+
+const inputName = document.querySelector('#name')
+const error = document.querySelector('#error')
+
+// на изменение checkbox вкл/откл кнопку отправки (событие не click) (для откл добавляем класс disable)
+const checkbox = document.querySelector('#checkbox')
+const submit = document.querySelector('#submit')
+
+// на клик по глазику делаем видимые поля пароля (должно работать в формате туда обратно)
+const password = document.querySelector('#password')
+const togglePassword = document.querySelector('#toggle-password')
+*/
+
+
+/* ------------------------------ */
+
+
+/* 4) Event Phases and their differences.
+
+const parentNode = document.querySelector('#parent')
+const childrenNode = document.querySelector('#children')
+
+// Что будет в консоли при клике на родителя? Что будет в консоли при клике на дочерний?
+// childrenNode.addEventListener('click', () => {
+//     console.log('children')
+// }) 
+
+// parentNode.addEventListener('click', () => {
+//     console.log('parent')
+// }) 
+
+// Что будет в консоли при клике на родителя? Что будет в консоли при клике на дочерний?
+// childrenNode.addEventListener('click', () => {
+//     console.log('children')
+// }) 
+
+// parentNode.addEventListener('click', (e) => {
+//     console.log('parent')
+// },true) 
+
+*/
+
+/* 5) Custom events. 
+let count = 0
+const countNode = document.querySelector('#counter')
+const countBtn = document.querySelector('#count-btn')
+
+const event = new CustomEvent('counterEvent', { detail: {count} })
+
+countBtn.addEventListener('click', () => {
+  count++
+
+  const event = new CustomEvent('counterEvent', {
+    detail: { count }
+  })
+
+  countNode.dispatchEvent(event)
+})
+
+countNode.addEventListener('counterEvent', (e) => {
+    countNode.textContent = e.detail.count
+}) */
 
 
 /* НИЖЕ СПОЙЛЕР!!!!!!!!!!!!!!!!!!!!!!! */
@@ -357,28 +431,6 @@ const childrenNode = document.querySelector('#children')
 // parentNode.addEventListener('click', (e) => {
 //     console.log('parent')
 // },true) 
-
-/* 4) Custom events. */
-let count = 0
-const countNode = document.querySelector('#counter')
-const countBtn = document.querySelector('#count-btn')
-
-const event = new CustomEvent('counterEvent', { detail: {count} })
-
-countBtn.addEventListener('click', () => {
-  count++
-
-  const event = new CustomEvent('counterEvent', {
-    detail: { count }
-  })
-
-  countNode.dispatchEvent(event)
-})
-
-countNode.addEventListener('counterEvent', (e) => {
-    countNode.textContent = e.detail.count
-})
-
 
 
 
