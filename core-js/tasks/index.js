@@ -63,3 +63,19 @@
 // console.log(memoSum(1, 2))
 // console.log(memoSum(5, 2))
 // console.log(memoSum(1, 2))
+
+
+//Arguments Reverser: Implement a function that reverses the order of arguments it receives, returning a new function with reversed arguments.
+
+// const pow = (a, b) => a ** b
+
+
+// function reversArg(fn) {
+//     return function(...args) {
+//         return fn(...args.reverse())
+//     }
+// }
+
+// const powRevers = reversArg(pow)
+// console.log(powRevers(3, 2))
+// console.log(pow(3, 2))
