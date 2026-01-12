@@ -79,3 +79,18 @@
 // const powRevers = reversArg(pow)
 // console.log(powRevers(3, 2))
 // console.log(pow(3, 2))
+
+
+// Array Chunker: Develop a function that divides an array
+
+// Array.prototype.chunker = function(n) {
+//     const result = []
+
+//     for(let i = 0; i < this.length; i += n) {
+//         result.push(this.slice(i, i + n))
+//     }
+
+//     return result
+// };
+
+// console.log([1,2,3,4,5,6,7, 8].chunker(2))
