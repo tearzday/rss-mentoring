@@ -13,3 +13,53 @@
 // }
 
 // customSetTimeout(() => {console.log('yes')}, 3000)
+
+
+// Memoization Function: Create a function that implements memoization to cache and return the results of expensive function calls.
+
+
+// function memoSum() {
+//     const cache = {}
+
+//     return function(a, b) {
+//         const key = `${a}${b}`
+
+//         if(!cache[key]) {
+//             cache[key] = a + b
+//             console.log("It is don't cache value")
+//         }
+
+//         return cache[key]
+//     }
+// }
+
+// const sum = memoSum()
+// console.log(sum(1, 2))
+// console.log(sum(5, 2))
+// console.log(sum(1, 2))
+
+
+// Universal memo
+
+// function memoization(callback) {
+//     const cache = {}
+
+//     return function () {
+//         const key = JSON.stringify(...arguments)
+
+//         if(!cache[key]) {
+//             cache[key] = callback(...arguments) 
+//             console.log("It is don't cache value")
+//         }
+
+//         return cache[key]
+//     }
+// }
+
+// const sum = (a, b) => a + b
+
+// const memoSum = memoization(sum)
+
+// console.log(memoSum(1, 2))
+// console.log(memoSum(5, 2))
+// console.log(memoSum(1, 2))
